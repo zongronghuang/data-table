@@ -11,7 +11,33 @@
 </head>
 
 <body>
-  <nav class="sidebar"></nav>
+  <nav class="sidebar">
+    <div class="sidebar__home"></div>
+    <div class="sidebar__menu">
+      <div class="sidebar__menu__link sidebar__menu__link--frame 
+      sidebar__menu__link--active
+      sidebar__menu--active">
+        <i class="fas fa-adjust"></i>
+        <!-- <img src="./static/icons/frame.svg" alt="frame" /> -->
+      </div>
+      <div class="sidebar__menu__link sidebar__menu__link--folder">
+        <i class="fas fa-adjust"></i>
+        <!-- <img src="./static/icons/folder.svg" alt="folder" /> -->
+      </div>
+      <div class="sidebar__menu__link sidebar__menu__link--mail">
+        <i class="fas fa-adjust"></i>
+        <!-- <img src="./static/icons/mail.svg" alt="mail" /> -->
+      </div>
+      <!-- darkmode toggle -->
+
+      <div class="sidebar__menu__link">
+        <label class="sidebar__darkmode__label" for="dark__mode__toggle"></label>
+        <input type="checkbox" class="sidebar__darkmode__input" id="dark__mode__toggle" />
+      </div>
+
+    </div>
+  </nav>
+
   <main class="main">
     <h1 class="main__title">Campaign</h1>
     <table class="main__table">
@@ -62,15 +88,42 @@
           <td class="table__cell table__cell--starttime">Start Time</td>
           <td class="table__cell table__cell--endtime">End Time</td>
           <td class="table__cell table__cell--action">
-            <img class="cell__action__icon" src="./static/icons/menu.svg" id="action__input_1" alt="menu" />
+            <i class="fas fa-adjust cell__action__icon" id="action__input_1" alt="menu"></i>
+            <!-- <img class="cell__action__icon" src="./static/icons/menu.svg" id="action__input_1" alt="menu" /> -->
+
             <!-- menu -->
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input_1"
+              id="action__menu_1">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <i class="fas fa-adjust menu__item__icon"></i>
+                <!-- <img src="./static/icons/duplicate.svg" class="menu__item__icon" /> -->
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <i class="fas fa-adjust menu__item__icon"></i>
+                <!-- <img src="./static/icons/edit.svg" class="menu__item__icon" /> -->
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <i class="fas fa-adjust menu__item__icon"></i>
+                <!-- <img src="./static/icons/delete.svg" class="menu__item__icon" /> -->
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+
           </td>
         </tr>
+
+
       </tbody>
 
 
     </table>
   </main>
+
+
 </body>
 
 </html>

@@ -134,6 +134,7 @@ body {
 }
 .table__cell--action {
   width: 210px;
+  position: relative;
 }
 .cell__action__icon {
   cursor: pointer;
@@ -144,4 +145,92 @@ body {
 .header__cell__icon--right {
   position: absolute;
   right: 0;
+}
+
+.action__menu {
+  z-index: 999;
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  width: 140px;
+  height: 120px;
+  background: var(--white);
+  border: 1px slid var(--border-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.menu__body {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+}
+
+.menu__item__icon {
+  margin-right: 14px;
+}
+
+.sidebar__home {
+  min-height: 64px;
+  background: var(--logo-url);
+  background-size: 100% 100%;
+  margin-bottom: 83px;
+  cursor: pointer;
+}
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar__menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.sidebar__menu__link--active {
+  background: var(--white);
+}
+.sidebar__menu > div:not(:last-child) {
+  margin-bottom: 55px;
+}
+
+.sidebar__darkmode__label {
+  background: var(--darkmode-toggle-url);
+  background-size: 100% 100%;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+.sidebar__darkmode__input {
+  display: none;
+}
+
+
+[data-theme="dark"] {
+  --main-dark: #3a3a3a;
+  --grey-1: #e4e4e4;
+  --background-grey: #202020;
+  --main-color: transparent;
+  --border-color: #e4e4e4;
+  --zebra-color: #575757;
+  --header-color: #2e2e2e;
+  --table-grey-text: rgba(255, 255, 255, 37%);
+  --white: white;
+  --main-text-color: white;
+  --header-text-color: #aaaaaa;
+  --table-background-color: #3a3a3a;
+  --logo-url: url("./static/icons/logo-dark.svg");
+  --darkmode-toggle-url: url("./static/icons/darkmode-off.svg");
 }
